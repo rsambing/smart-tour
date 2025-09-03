@@ -1,0 +1,16 @@
+# SmartTour Angola - Dependências Essenciais
+
+# Data Processing and Analysis
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Visualization Libraries
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Core Python Libraries (já incluídas no Python padrão)
+# pathlib
+# logging
+# typing
+# datetime
