@@ -241,7 +241,7 @@ status = smarttour_app.get_status()
 
 **Grupo 2 - FTL Bootcamp**
 - 👑 **Team Leader**: Reinaldo Sambinga
-- 👥 **Team**:Alberto Pessela, Manuel Joaquim, Joao Antonio, Jose Poba, Maria Jose, Sergio Chissevo
+- 👥 **Team**:Alberto Pessela, Manuel Joaquim, Joao Antonio, Jose Poba, Maria Jose, Sérgio Chisevo
 - 🎯 **Objetivo**: Desenvolver solução inovadora para turismo sustentável
 - 📅 **Prazo**: Hackathon FTL Bootcamp
 - 🏆 **Meta**: Sistema completo e funcional
