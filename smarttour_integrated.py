@@ -54,7 +54,7 @@ class SmartTourAngola:
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('smarttour.log'),
+                logging.FileHandler('logs/smarttour.log'),
                 logging.StreamHandler()
             ]
         )
@@ -62,7 +62,7 @@ class SmartTourAngola:
     
     def load_data(self, visitors_file=None, eco_sites_file=None):
         """Carrega dados de arquivos CSV"""
-        base_path = Path("Material_hackathon/Data_set_examplos/")
+        base_path = Path("uploads/")
         
         # Arquivos padrão se não especificados
         visitors_file = visitors_file or base_path / "Visitors_by_Province__preview_.csv"

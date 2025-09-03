@@ -50,7 +50,7 @@ class SmartTourApp:
             level=logging.INFO,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('smarttour.log'),
+                logging.FileHandler('logs/smarttour.log'),
                 logging.StreamHandler(sys.stdout)
             ]
         )
