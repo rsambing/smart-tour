@@ -262,12 +262,7 @@
                 <div>Sítios Ecológicos</div>
             </div>
             <div class="status-card">
-                <div class="status-value"
-                     {% if status.data_loaded %}
-                         style="color: var(--green-primary);"
-                     {% else %}
-                         style="color: var(--red-angola);"
-                     {% endif %}>
+                <div class="status-value" style="color: {% if status.data_loaded %}var(--green-primary){% else %}var(--red-angola){% endif %}">
                     {% if status.data_loaded %}✅{% else %}❌{% endif %}
                 </div>
                 <div>Dados Carregados</div>
@@ -327,7 +322,7 @@
                 <i class="fas fa-cog rotating"></i> {{ analysis_status.message }}
             </div>
             <div class="progress-bar">
-                <div class="progress-fill" id="progress-fill" style="width: {% if analysis_status.progress %}{{ analysis_status.progress }}%{% else %}0%{% endif %};"></div>
+                <div class="progress-fill" id="progress-fill" style="width: {{ analysis_status.progress }}%;"></div>
             </div>
             <div style="text-align: center; margin-top: 10px; font-size: 0.9em;">
                 {{ analysis_status.progress }}% concluído
@@ -364,9 +359,9 @@
         }
         
         // Atualizar a cada 2 segundos se análise estiver rodando
-        /* {% if analysis_status.running %} */
+        {% if analysis_status.running %}
         setInterval(updateStatus, 2000);
-        /* {% endif %} */
+        {% endif %}
     </script>
 </body>
 </html>

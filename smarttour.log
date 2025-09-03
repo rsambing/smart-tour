@@ -1,123 +1,109 @@
-2025-09-02 19:55:26,291 - INFO - SmartTour Angola inicializado
-2025-09-02 19:55:26,305 - INFO - Visitantes: 12 registros
-2025-09-02 19:55:26,313 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 19:55:26,313 - INFO - Dados carregados com sucesso!
-2025-09-02 19:55:26,314 - INFO - Iniciando análise...
-2025-09-02 19:55:26,414 - INFO - Análise completa!
-2025-09-02 19:55:27,232 - INFO - Relatório exportado: smarttour_angola_report.html
-2025-09-02 19:56:37,763 - INFO - SmartTour Angola inicializado
-2025-09-02 19:56:37,769 - INFO - Visitantes: 12 registros
-2025-09-02 19:56:37,771 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 19:56:37,771 - INFO - Dados carregados com sucesso!
-2025-09-02 19:56:37,771 - INFO - Iniciando análise...
-2025-09-02 19:56:37,807 - INFO - Análise completa!
-2025-09-02 19:56:38,049 - INFO - Relatório exportado: smarttour_angola_report.html
-2025-09-02 19:59:45,966 - INFO - SmartTour Angola inicializado
-2025-09-02 19:59:45,971 - INFO - Visitantes: 12 registros
-2025-09-02 19:59:45,972 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 19:59:45,973 - INFO - Dados carregados com sucesso!
-2025-09-02 19:59:45,973 - INFO - Iniciando análise...
-2025-09-02 19:59:46,008 - INFO - Análise completa!
-2025-09-02 19:59:46,323 - INFO - Relatório exportado: smarttour_angola_report.html
-2025-09-02 20:11:07,784 - INFO - SmartTour Angola inicializado
-2025-09-02 20:11:07,791 - INFO - Visitantes: 12 registros
-2025-09-02 20:11:07,793 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 20:11:07,793 - INFO - Dados carregados com sucesso!
-2025-09-02 20:11:07,793 - INFO - Iniciando análise...
-2025-09-02 20:11:07,833 - INFO - Análise completa!
-2025-09-02 20:11:08,149 - INFO - Relatório exportado: smarttour_angola_report.html
-2025-09-02 21:31:40,706 - INFO - SmartTour Angola inicializado
-2025-09-02 21:34:31,224 - INFO - SmartTour Angola inicializado
-2025-09-02 21:34:31,364 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-09-03 10:38:39,310 - SmartTour - INFO - SmartTour App inicializada
+2025-09-03 10:38:39,313 - SmartTour - INFO - Carregando dados de exemplo...
+2025-09-03 10:38:39,313 - SmartTour - ERROR - Falha ao carregar todos os dados necessários
+2025-09-03 10:40:53,320 - SmartTour - INFO - SmartTour App inicializada
+2025-09-03 10:40:53,321 - SmartTour - INFO - Carregando dados de exemplo...
+2025-09-03 10:40:53,323 - smarttour.utils.data_processor - INFO - Dados carregados: /home/rsambing/EASSNV/FTL Bootcamp/projects/smart-tour/uploads/Visitors_by_Province__preview_.csv - 12 registros
+2025-09-03 10:40:53,325 - SmartTour - INFO - Dados de visitantes carregados: 12 registros
+2025-09-03 10:40:53,327 - smarttour.utils.data_processor - INFO - Dados carregados: /home/rsambing/EASSNV/FTL Bootcamp/projects/smart-tour/uploads/Eco_Sites__preview_.csv - 8 registros
+2025-09-03 10:40:53,331 - SmartTour - INFO - Dados de sítios ecológicos carregados: 8 registros
+2025-09-03 10:40:53,331 - SmartTour - INFO - SmartTour: Todos os dados carregados com sucesso!
+2025-09-03 10:40:53,331 - SmartTour - INFO - Iniciando análise completa...
+2025-09-03 10:40:53,416 - SmartTour - INFO - Análise de visitantes concluída
+2025-09-03 10:40:53,437 - SmartTour - INFO - Análise de sítios ecológicos concluída
+2025-09-03 10:40:53,439 - SmartTour - INFO - KPIs gerados
+2025-09-03 10:40:53,440 - SmartTour - INFO - Relatório executivo criado
+2025-09-03 10:40:53,440 - SmartTour - INFO - Análise completa finalizada com sucesso!
+2025-09-03 10:40:56,174 - SmartTour - INFO - Visualizações geradas com sucesso
+2025-09-03 10:40:56,175 - SmartTour - ERROR - Erro ao exportar relatório: '\n                        font-family'
+2025-09-03 10:53:58,934 - INFO - SmartTour Angola inicializado
+2025-09-03 10:53:58,934 - INFO - Dados carregados com sucesso!
+2025-09-03 10:53:58,934 - INFO - Iniciando análise...
+2025-09-03 10:53:58,935 - INFO - Análise completa!
+2025-09-03 10:53:59,174 - INFO - Relatório exportado: smarttour_angola_report.html
+2025-09-03 10:54:33,465 - SmartTour - INFO - SmartTour App inicializada
+2025-09-03 10:54:33,465 - SmartTour - INFO - Carregando dados de exemplo...
+2025-09-03 10:54:33,468 - smarttour.utils.data_processor - INFO - Dados carregados: /home/rsambing/EASSNV/FTL Bootcamp/projects/smart-tour/uploads/Visitors_by_Province__preview_.csv - 12 registros
+2025-09-03 10:54:33,469 - SmartTour - INFO - Dados de visitantes carregados: 12 registros
+2025-09-03 10:54:33,471 - smarttour.utils.data_processor - INFO - Dados carregados: /home/rsambing/EASSNV/FTL Bootcamp/projects/smart-tour/uploads/Eco_Sites__preview_.csv - 8 registros
+2025-09-03 10:54:33,474 - SmartTour - INFO - Dados de sítios ecológicos carregados: 8 registros
+2025-09-03 10:54:33,474 - SmartTour - INFO - SmartTour: Todos os dados carregados com sucesso!
+2025-09-03 10:54:33,475 - SmartTour - INFO - Iniciando análise completa...
+2025-09-03 10:54:33,551 - SmartTour - INFO - Análise de visitantes concluída
+2025-09-03 10:54:33,560 - SmartTour - INFO - Análise de sítios ecológicos concluída
+2025-09-03 10:54:33,561 - SmartTour - INFO - KPIs gerados
+2025-09-03 10:54:33,561 - SmartTour - INFO - Relatório executivo criado
+2025-09-03 10:54:33,561 - SmartTour - INFO - Análise completa finalizada com sucesso!
+2025-09-03 10:54:35,735 - SmartTour - INFO - Visualizações geradas com sucesso
+2025-09-03 10:54:35,736 - SmartTour - ERROR - Erro ao exportar relatório: '\n                        font-family'
+2025-09-03 10:55:41,791 - SmartTour - INFO - SmartTour App inicializada
+2025-09-03 10:56:49,618 - INFO - SmartTour Angola inicializado
+2025-09-03 10:56:55,395 - INFO - Dados carregados com sucesso!
+2025-09-03 10:58:29,172 - SmartTour - INFO - SmartTour App inicializada
+2025-09-03 10:58:29,174 - SmartTour - INFO - Carregando dados de exemplo...
+2025-09-03 10:58:29,174 - SmartTour - ERROR - Falha ao carregar todos os dados necessários
+2025-09-03 10:58:44,542 - SmartTour - INFO - SmartTour App inicializada
+2025-09-03 10:58:44,543 - SmartTour - INFO - Carregando dados de exemplo...
+2025-09-03 10:58:44,545 - smarttour.utils.data_processor - INFO - Dados carregados: /home/rsambing/EASSNV/FTL Bootcamp/projects/smart-tour/uploads/Visitors_by_Province__preview_.csv - 12 registros
+2025-09-03 10:58:44,546 - SmartTour - INFO - Dados de visitantes carregados: 12 registros
+2025-09-03 10:58:44,548 - smarttour.utils.data_processor - INFO - Dados carregados: /home/rsambing/EASSNV/FTL Bootcamp/projects/smart-tour/uploads/Eco_Sites__preview_.csv - 8 registros
+2025-09-03 10:58:44,551 - SmartTour - INFO - Dados de sítios ecológicos carregados: 8 registros
+2025-09-03 10:58:44,551 - SmartTour - INFO - SmartTour: Todos os dados carregados com sucesso!
+2025-09-03 10:58:44,551 - SmartTour - INFO - Iniciando análise completa...
+2025-09-03 10:58:44,629 - SmartTour - INFO - Análise de visitantes concluída
+2025-09-03 10:58:44,641 - SmartTour - INFO - Análise de sítios ecológicos concluída
+2025-09-03 10:58:44,641 - SmartTour - INFO - KPIs gerados
+2025-09-03 10:58:44,641 - SmartTour - INFO - Relatório executivo criado
+2025-09-03 10:58:44,642 - SmartTour - INFO - Análise completa finalizada com sucesso!
+2025-09-03 10:58:46,751 - SmartTour - INFO - Visualizações geradas com sucesso
+2025-09-03 10:58:46,752 - SmartTour - ERROR - Erro ao exportar relatório: '\n                        font-family'
+2025-09-03 10:59:16,087 - SmartTour - INFO - SmartTour App inicializada
+2025-09-03 10:59:16,087 - SmartTour - INFO - Carregando dados de exemplo...
+2025-09-03 10:59:16,090 - smarttour.utils.data_processor - INFO - Dados carregados: /home/rsambing/EASSNV/FTL Bootcamp/projects/smart-tour/uploads/Visitors_by_Province__preview_.csv - 12 registros
+2025-09-03 10:59:16,091 - SmartTour - INFO - Dados de visitantes carregados: 12 registros
+2025-09-03 10:59:16,092 - smarttour.utils.data_processor - INFO - Dados carregados: /home/rsambing/EASSNV/FTL Bootcamp/projects/smart-tour/uploads/Eco_Sites__preview_.csv - 8 registros
+2025-09-03 10:59:16,095 - SmartTour - INFO - Dados de sítios ecológicos carregados: 8 registros
+2025-09-03 10:59:16,095 - SmartTour - INFO - SmartTour: Todos os dados carregados com sucesso!
+2025-09-03 10:59:16,095 - SmartTour - INFO - Iniciando análise completa...
+2025-09-03 10:59:16,159 - SmartTour - INFO - Análise de visitantes concluída
+2025-09-03 10:59:16,170 - SmartTour - INFO - Análise de sítios ecológicos concluída
+2025-09-03 10:59:16,170 - SmartTour - INFO - KPIs gerados
+2025-09-03 10:59:16,171 - SmartTour - INFO - Relatório executivo criado
+2025-09-03 10:59:16,171 - SmartTour - INFO - Análise completa finalizada com sucesso!
+2025-09-03 10:59:18,352 - SmartTour - INFO - Visualizações geradas com sucesso
+2025-09-03 10:59:18,354 - SmartTour - ERROR - Erro ao exportar relatório: '\n                        font-family'
+2025-09-03 10:59:32,701 - INFO - SmartTour Angola inicializado
+2025-09-03 10:59:41,119 - INFO - SmartTour Angola inicializado
+2025-09-03 10:59:41,158 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.59.58.114:5000
-2025-09-02 21:34:31,366 - INFO - [33mPress CTRL+C to quit[0m
-2025-09-02 21:34:31,369 - INFO -  * Restarting with stat
-2025-09-02 21:34:35,922 - INFO - SmartTour Angola inicializado
-2025-09-02 21:34:35,975 - WARNING -  * Debugger is active!
-2025-09-02 21:34:36,323 - INFO -  * Debugger PIN: 130-827-236
-2025-09-02 21:34:49,023 - INFO - 127.0.0.1 - - [02/Sep/2025 21:34:49] "GET /?id=50922b23-58db-479f-8fb5-3e47af3acfd8&vscodeBrowserReqId=1756845288838 HTTP/1.1" 200 -
-2025-09-02 21:36:11,771 - INFO - Visitantes: 12 registros
-2025-09-02 21:36:11,780 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 21:36:11,781 - INFO - Dados carregados com sucesso!
-2025-09-02 21:36:11,785 - INFO - 127.0.0.1 - - [02/Sep/2025 21:36:11] "[32mPOST /upload HTTP/1.1[0m" 302 -
-2025-09-02 21:36:11,830 - INFO - 127.0.0.1 - - [02/Sep/2025 21:36:11] "GET / HTTP/1.1" 200 -
-2025-09-02 21:36:26,488 - INFO - Iniciando análise...
-2025-09-02 21:36:26,499 - INFO - 127.0.0.1 - - [02/Sep/2025 21:36:26] "[32mPOST /analyze HTTP/1.1[0m" 302 -
-2025-09-02 21:36:26,587 - INFO - 127.0.0.1 - - [02/Sep/2025 21:36:26] "GET / HTTP/1.1" 200 -
-2025-09-02 21:36:26,667 - INFO - Análise completa!
-2025-09-02 21:36:28,710 - INFO - 127.0.0.1 - - [02/Sep/2025 21:36:28] "GET /api/status HTTP/1.1" 200 -
-2025-09-02 21:36:30,716 - INFO - 127.0.0.1 - - [02/Sep/2025 21:36:30] "GET /api/status HTTP/1.1" 200 -
-2025-09-02 21:36:30,771 - INFO - 127.0.0.1 - - [02/Sep/2025 21:36:30] "GET / HTTP/1.1" 200 -
-2025-09-02 21:36:37,104 - INFO - 127.0.0.1 - - [02/Sep/2025 21:36:37] "GET /results HTTP/1.1" 200 -
-2025-09-02 21:38:02,005 - INFO - SmartTour Angola inicializado
-2025-09-02 21:38:18,524 - INFO - SmartTour Angola inicializado
-2025-09-02 21:38:18,544 - INFO - Visitantes: 12 registros
-2025-09-02 21:38:18,552 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 21:38:18,552 - INFO - Dados carregados com sucesso!
-2025-09-02 21:38:18,553 - INFO - Iniciando análise...
-2025-09-02 21:38:18,698 - INFO - Análise completa!
-2025-09-02 21:38:20,426 - INFO - Relatório exportado: smarttour_angola_report.html
-2025-09-02 21:39:03,738 - INFO - SmartTour Angola inicializado
-2025-09-02 21:39:03,760 - INFO - Visitantes: 12 registros
-2025-09-02 21:39:03,764 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 21:39:03,765 - INFO - Dados carregados com sucesso!
-2025-09-02 21:39:03,765 - INFO - Iniciando análise...
-2025-09-02 21:39:03,857 - INFO - Análise completa!
-2025-09-02 21:39:04,981 - INFO - Relatório exportado: smarttour_angola_report.html
-2025-09-02 21:43:15,526 - INFO - SmartTour Angola inicializado
-2025-09-02 21:43:48,746 - INFO - SmartTour Angola inicializado
-2025-09-02 21:46:14,242 - INFO - SmartTour Angola inicializado
-2025-09-02 21:46:56,030 - INFO - SmartTour Angola inicializado
-2025-09-02 21:49:11,679 - INFO - SmartTour Angola inicializado
-2025-09-02 21:49:25,393 - INFO - SmartTour Angola inicializado
-2025-09-02 21:49:25,461 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://10.59.58.114:5000
-2025-09-02 21:49:25,463 - INFO - [33mPress CTRL+C to quit[0m
-2025-09-02 21:49:25,468 - INFO -  * Restarting with stat
-2025-09-02 21:49:31,065 - INFO - SmartTour Angola inicializado
-2025-09-02 21:49:31,119 - WARNING -  * Debugger is active!
-2025-09-02 21:49:31,120 - INFO -  * Debugger PIN: 130-827-236
-2025-09-02 21:49:41,964 - INFO - 127.0.0.1 - - [02/Sep/2025 21:49:41] "GET / HTTP/1.1" 200 -
-2025-09-02 21:49:42,347 - INFO - 127.0.0.1 - - [02/Sep/2025 21:49:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2025-09-02 21:49:54,582 - INFO - Visitantes: 12 registros
-2025-09-02 21:49:54,584 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 21:49:54,585 - INFO - Dados carregados com sucesso!
-2025-09-02 21:49:54,589 - INFO - 127.0.0.1 - - [02/Sep/2025 21:49:54] "[32mPOST /load_default HTTP/1.1[0m" 302 -
-2025-09-02 21:49:54,607 - INFO - 127.0.0.1 - - [02/Sep/2025 21:49:54] "GET / HTTP/1.1" 200 -
-2025-09-02 21:50:04,431 - INFO - Iniciando análise...
-2025-09-02 21:50:04,432 - INFO - 127.0.0.1 - - [02/Sep/2025 21:50:04] "[32mPOST /analyze HTTP/1.1[0m" 302 -
-2025-09-02 21:50:04,473 - INFO - Análise completa!
-2025-09-02 21:50:04,487 - INFO - 127.0.0.1 - - [02/Sep/2025 21:50:04] "GET / HTTP/1.1" 200 -
-2025-09-02 21:50:07,898 - INFO - Iniciando análise...
-2025-09-02 21:50:07,898 - INFO - 127.0.0.1 - - [02/Sep/2025 21:50:07] "[32mPOST /analyze HTTP/1.1[0m" 302 -
-2025-09-02 21:50:07,935 - INFO - Análise completa!
-2025-09-02 21:50:07,943 - INFO - 127.0.0.1 - - [02/Sep/2025 21:50:07] "GET / HTTP/1.1" 200 -
-2025-09-02 21:50:13,976 - INFO - 127.0.0.1 - - [02/Sep/2025 21:50:13] "GET /results HTTP/1.1" 200 -
-2025-09-02 21:50:44,022 - INFO - 127.0.0.1 - - [02/Sep/2025 21:50:44] "GET / HTTP/1.1" 200 -
-2025-09-02 21:51:18,418 - INFO - Visitantes: 12 registros
-2025-09-02 21:51:18,421 - INFO - Sítios ecológicos: 8 registros
-2025-09-02 21:51:18,421 - INFO - Dados carregados com sucesso!
-2025-09-02 21:51:18,422 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:18] "[32mPOST /upload HTTP/1.1[0m" 302 -
-2025-09-02 21:51:18,436 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:18] "GET / HTTP/1.1" 200 -
-2025-09-02 21:51:23,140 - INFO - Iniciando análise...
-2025-09-02 21:51:23,148 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:23] "[32mPOST /analyze HTTP/1.1[0m" 302 -
-2025-09-02 21:51:23,197 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:23] "GET / HTTP/1.1" 200 -
-2025-09-02 21:51:23,279 - INFO - Análise completa!
-2025-09-02 21:51:25,294 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:25] "GET /api/status HTTP/1.1" 200 -
-2025-09-02 21:51:27,292 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:27] "GET /api/status HTTP/1.1" 200 -
-2025-09-02 21:51:27,344 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:27] "GET / HTTP/1.1" 200 -
-2025-09-02 21:51:30,512 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:30] "GET /results HTTP/1.1" 200 -
-2025-09-02 21:51:44,877 - INFO - Relatório exportado: smarttour_angola_report_20250902_215144.html
-2025-09-02 21:51:44,888 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:44] "GET /export_html HTTP/1.1" 200 -
-2025-09-02 21:51:58,753 - INFO - 127.0.0.1 - - [02/Sep/2025 21:51:58] "GET / HTTP/1.1" 200 -
-2025-09-02 22:10:36,153 - INFO - SmartTour Angola inicializado
-2025-09-02 22:10:36,153 - INFO - Dados carregados com sucesso!
-2025-09-02 22:10:36,153 - INFO - Iniciando análise...
-2025-09-02 22:10:36,153 - INFO - Análise completa!
-2025-09-02 22:10:36,359 - INFO - Relatório exportado: smarttour_angola_report.html
-2025-09-03 10:01:28,432 - INFO - SmartTour Angola inicializado
-2025-09-03 10:01:36,943 - INFO - SmartTour Angola inicializado
+2025-09-03 10:59:41,158 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-03 10:59:41,159 - INFO -  * Restarting with stat
+2025-09-03 10:59:42,271 - INFO - SmartTour Angola inicializado
+2025-09-03 10:59:42,284 - WARNING -  * Debugger is active!
+2025-09-03 10:59:42,286 - INFO -  * Debugger PIN: 867-432-550
+2025-09-03 10:59:53,419 - INFO - 127.0.0.1 - - [03/Sep/2025 10:59:53] "GET / HTTP/1.1" 200 -
+2025-09-03 10:59:58,302 - INFO - Dados carregados com sucesso!
+2025-09-03 10:59:58,307 - INFO - 127.0.0.1 - - [03/Sep/2025 10:59:58] "[32mPOST /load_default HTTP/1.1[0m" 302 -
+2025-09-03 10:59:58,375 - INFO - 127.0.0.1 - - [03/Sep/2025 10:59:58] "GET / HTTP/1.1" 200 -
+2025-09-03 11:00:01,181 - INFO - Iniciando análise...
+2025-09-03 11:00:01,182 - INFO - Análise completa!
+2025-09-03 11:00:01,183 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:01] "[32mPOST /analyze HTTP/1.1[0m" 302 -
+2025-09-03 11:00:01,201 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:01] "GET / HTTP/1.1" 200 -
+2025-09-03 11:00:37,349 - INFO - Visitantes: 12 registros
+2025-09-03 11:00:37,354 - INFO - Sítios ecológicos: 8 registros
+2025-09-03 11:00:37,355 - INFO - Dados carregados com sucesso!
+2025-09-03 11:00:37,357 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:37] "[32mPOST /upload HTTP/1.1[0m" 302 -
+2025-09-03 11:00:37,368 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:37] "GET / HTTP/1.1" 200 -
+2025-09-03 11:00:46,390 - INFO - Iniciando análise...
+2025-09-03 11:00:46,392 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:46] "[32mPOST /analyze HTTP/1.1[0m" 302 -
+2025-09-03 11:00:46,459 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:46] "GET / HTTP/1.1" 200 -
+2025-09-03 11:00:46,464 - INFO - Análise completa!
+2025-09-03 11:00:48,485 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:48] "GET /api/status HTTP/1.1" 200 -
+2025-09-03 11:00:50,482 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:50] "GET /api/status HTTP/1.1" 200 -
+2025-09-03 11:00:50,504 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:50] "GET / HTTP/1.1" 200 -
+2025-09-03 11:00:52,586 - INFO - 127.0.0.1 - - [03/Sep/2025 11:00:52] "GET /results HTTP/1.1" 200 -
+2025-09-03 11:01:00,562 - INFO - 127.0.0.1 - - [03/Sep/2025 11:01:00] "GET / HTTP/1.1" 200 -
+2025-09-03 11:01:03,310 - INFO - Relatório exportado: smarttour_angola_report_20250903_110102.html
+2025-09-03 11:01:03,317 - INFO - 127.0.0.1 - - [03/Sep/2025 11:01:03] "GET /export_html HTTP/1.1" 200 -

@@ -1,164 +1,165 @@
-#!/usr/bin/env python3
-"""
-SmartTour Angola - Desktop App (Safe Version)
-Interface desktop segura para análise de turismo sustentável
-"""
+
+# Interface Desktop Minimalista para SmartTour Angola
+# Mantém apenas funções essenciais e comentários em português simples
 
 import tkinter as tk
-from tkinter import ttk, filedialog, messagebox, scrolledtext
+from tkinter import filedialog, messagebox, scrolledtext
 import os
 import sys
 import webbrowser
 from datetime import datetime
 from pathlib import Path
 
-# Import do sistema SmartTour
+# Importa a lógica principal do SmartTour
 try:
     from smarttour_integrated import SmartTourAngola
 except ImportError:
-    print("❌ Erro: smarttour_integrated.py não encontrado")
+    print("Erro: smarttour_integrated.py não encontrado")
     sys.exit(1)
 
-class SmartTourDesktopSafe:
-    """Aplicação desktop segura do SmartTour Angola"""
-    
+
+class SmartTourDesktopMinimal:
+    """
+    Interface desktop minimalista do SmartTour Angola
+    Comentários em português simples
+    """
     def __init__(self):
-        try:
-            self.root = tk.Tk()
-            self.smarttour = SmartTourAngola()
-            self.setup_window()
-            self.setup_ui()
-            self.add_log("SmartTour Desktop iniciado com sucesso")
-        except Exception as e:
-            print(f"❌ Erro na inicialização: {e}")
-            sys.exit(1)
-    
-    def setup_window(self):
-        """Configura janela principal"""
-        self.root.title("🇦🇴 SmartTour Angola - Desktop")
-        self.root.geometry("1000x700")
-        self.root.configure(bg='#1a1a1a')
-        
-        # Prevenir fechamento acidental
+        # Inicializa janela principal
+        self.root = tk.Tk()
+        self.root.title("SmartTour Angola - Desktop Minimalista")
+        self.root.geometry("600x400")
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
-    
-    def setup_ui(self):
-        """Configura interface simples e segura"""
-        
-        # Frame principal
-        main_frame = tk.Frame(self.root, bg='#1a1a1a')
-        main_frame.pack(fill='both', expand=True, padx=20, pady=20)
-        
-        # Cabeçalho
-        header_frame = tk.Frame(main_frame, bg='#2d2d2d', relief='raised', bd=2)
-        header_frame.pack(fill='x', pady=(0, 20))
-        
-        title_label = tk.Label(header_frame, 
-                              text="🇦🇴 SmartTour Angola",
-                              bg='#2d2d2d', fg='#ffd700',
-                              font=('Arial', 20, 'bold'))
-        title_label.pack(pady=15)
-        
-        subtitle_label = tk.Label(header_frame,
-                                 text="Sistema de Análise de Turismo Sustentável",
-                                 bg='#2d2d2d', fg='#00d084',
-                                 font=('Arial', 12))
-        subtitle_label.pack(pady=(0, 15))
-        
-        # Frame de controles
-        controls_frame = tk.Frame(main_frame, bg='#2d2d2d', relief='raised', bd=2)
-        controls_frame.pack(fill='x', pady=(0, 20))
-        
-        controls_title = tk.Label(controls_frame,
-                                 text="🎛️ Controles",
-                                 bg='#2d2d2d', fg='#ffd700',
-                                 font=('Arial', 14, 'bold'))
-        controls_title.pack(pady=(15, 10))
-        
-        # Botões principais
-        buttons_frame = tk.Frame(controls_frame, bg='#2d2d2d')
-        buttons_frame.pack(pady=(0, 15))
-        
-        self.btn_load = tk.Button(buttons_frame,
-                                 text="📊 Carregar Dados Padrão",
-                                 bg='#00d084', fg='white',
-                                 font=('Arial', 11, 'bold'),
-                                 command=self.load_default_data,
-                                 relief='flat', bd=0,
-                                 padx=20, pady=10)
+
+        # Instancia o sistema principal
+        self.smarttour = SmartTourAngola()
+
+        # Área de botões
+        frame = tk.Frame(self.root)
+        frame.pack(pady=10)
+
+        # Botão para carregar dados padrão
+        self.btn_load = tk.Button(frame, text="Carregar Dados Padrão", command=self.load_default_data)
         self.btn_load.pack(side='left', padx=5)
-        
-        self.btn_custom = tk.Button(buttons_frame,
-                                   text="📁 Carregar Personalizados",
-                                   bg='#00d084', fg='white',
-                                   font=('Arial', 11, 'bold'),
-                                   command=self.load_custom_data,
-                                   relief='flat', bd=0,
-                                   padx=20, pady=10)
+
+        # Botão para carregar dados personalizados
+        self.btn_custom = tk.Button(frame, text="Carregar Dados Personalizados", command=self.load_custom_data)
         self.btn_custom.pack(side='left', padx=5)
-        
-        self.btn_analyze = tk.Button(buttons_frame,
-                                    text="🔍 Executar Análise",
-                                    bg='#ffd700', fg='#1a1a1a',
-                                    font=('Arial', 11, 'bold'),
-                                    command=self.run_analysis,
-                                    relief='flat', bd=0,
-                                    padx=20, pady=10)
+
+        # Botão para executar análise
+        self.btn_analyze = tk.Button(frame, text="Executar Análise", command=self.run_analysis)
         self.btn_analyze.pack(side='left', padx=5)
-        
-        self.btn_export = tk.Button(buttons_frame,
-                                   text="📄 Gerar Relatório",
-                                   bg='#ffd700', fg='#1a1a1a',
-                                   font=('Arial', 11, 'bold'),
-                                   command=self.export_report,
-                                   relief='flat', bd=0,
-                                   padx=20, pady=10)
+
+        # Botão para exportar relatório
+        self.btn_export = tk.Button(frame, text="Exportar Relatório", command=self.export_report)
         self.btn_export.pack(side='left', padx=5)
-        
-        self.btn_open = tk.Button(buttons_frame,
-                                 text="🌐 Abrir Relatório",
-                                 bg='#00d084', fg='white',
-                                 font=('Arial', 11, 'bold'),
-                                 command=self.open_report,
-                                 relief='flat', bd=0,
-                                 padx=20, pady=10)
-        self.btn_open.pack(side='right', padx=5)
-        
-        # Status simples
-        status_frame = tk.Frame(main_frame, bg='#2d2d2d', relief='raised', bd=2)
-        status_frame.pack(fill='x', pady=(0, 20))
-        
-        status_title = tk.Label(status_frame,
-                               text="📈 Status do Sistema",
-                               bg='#2d2d2d', fg='#ffd700',
-                               font=('Arial', 14, 'bold'))
-        status_title.pack(pady=(15, 10))
-        
-        # KPIs simples
-        self.kpi_frame = tk.Frame(status_frame, bg='#2d2d2d')
-        self.kpi_frame.pack(pady=(0, 15))
-        
-        self.update_kpis()
-        
-        # Log area
-        log_frame = tk.Frame(main_frame, bg='#2d2d2d', relief='raised', bd=2)
-        log_frame.pack(fill='both', expand=True)
-        
-        log_title = tk.Label(log_frame,
-                            text="📋 Log do Sistema",
-                            bg='#2d2d2d', fg='#ffd700',
-                            font=('Arial', 14, 'bold'))
-        log_title.pack(pady=(15, 10))
-        
-        self.log_text = scrolledtext.ScrolledText(log_frame,
-                                                 bg='#1a1a1a', fg='#66ff99',
-                                                 font=('Consolas', 10),
-                                                 wrap='word', height=15)
-        self.log_text.pack(fill='both', expand=True, padx=15, pady=(0, 15))
-        
-        # Log inicial
-        self.add_log("Sistema iniciado e pronto para uso")
-        self.add_log("Use os botões acima para carregar dados e executar análise")
+
+        # Botão para abrir relatório
+        self.btn_open = tk.Button(frame, text="Abrir Relatório", command=self.open_report)
+        self.btn_open.pack(side='left', padx=5)
+
+        # Área de log para mensagens
+        self.log_text = scrolledtext.ScrolledText(self.root, height=10)
+        self.log_text.pack(fill='both', expand=True, padx=10, pady=10)
+
+        # Área de status simples
+        self.status_label = tk.Label(self.root, text="Status: Pronto", fg="green")
+        self.status_label.pack(pady=5)
+
+        self.add_log("Sistema iniciado. Use os botões acima.")
+
+    def add_log(self, msg):
+        """Adiciona mensagem ao log"""
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        self.log_text.insert('end', f"[{timestamp}] {msg}\n")
+        self.log_text.see('end')
+
+    def update_status(self, msg, color="black"):
+        """Atualiza status na interface"""
+        self.status_label.config(text=f"Status: {msg}", fg=color)
+
+    def load_default_data(self):
+        """Carrega dados padrão do sistema"""
+        self.add_log("Carregando dados padrão...")
+        ok = self.smarttour.load_data()
+        if ok:
+            self.add_log("Dados padrão carregados com sucesso!")
+            self.update_status("Dados carregados", "green")
+        else:
+            self.add_log("Erro ao carregar dados padrão.")
+            self.update_status("Erro ao carregar dados", "red")
+
+    def load_custom_data(self):
+        """Carrega dados personalizados (visitantes e sítios)"""
+        visitantes = filedialog.askopenfilename(title="Arquivo de visitantes", filetypes=[("CSV", "*.csv")])
+        if not visitantes:
+            return
+        sitios = filedialog.askopenfilename(title="Arquivo de sítios ecológicos", filetypes=[("CSV", "*.csv")])
+        if not sitios:
+            return
+        self.add_log(f"Carregando visitantes: {visitantes}")
+        self.add_log(f"Carregando sítios: {sitios}")
+        ok = self.smarttour.load_data(visitantes, sitios)
+        if ok:
+            self.add_log("Dados personalizados carregados!")
+            self.update_status("Dados carregados", "green")
+        else:
+            self.add_log("Erro ao carregar dados personalizados.")
+            self.update_status("Erro ao carregar dados", "red")
+
+    def run_analysis(self):
+        """Executa análise dos dados"""
+        if not getattr(self.smarttour, 'data_loaded', False):
+            self.add_log("Carregue os dados antes de analisar.")
+            self.update_status("Dados não carregados", "red")
+            return
+        self.add_log("Executando análise...")
+        ok = self.smarttour.perform_analysis()
+        if ok:
+            self.add_log("Análise concluída!")
+            self.update_status("Análise concluída", "green")
+        else:
+            self.add_log("Erro na análise.")
+            self.update_status("Erro na análise", "red")
+
+    def export_report(self):
+        """Exporta relatório HTML"""
+        if not getattr(self.smarttour, 'analysis_completed', False):
+            self.add_log("Execute a análise antes de exportar.")
+            self.update_status("Análise não concluída", "red")
+            return
+        filename = filedialog.asksaveasfilename(defaultextension=".html", filetypes=[("HTML", "*.html")])
+        if not filename:
+            return
+        self.add_log(f"Exportando relatório: {filename}")
+        ok = self.smarttour.export_report(filename)
+        if ok:
+            self.add_log("Relatório exportado!")
+            self.update_status("Relatório exportado", "green")
+        else:
+            self.add_log("Erro ao exportar relatório.")
+            self.update_status("Erro ao exportar relatório", "red")
+
+    def open_report(self):
+        """Abre relatório HTML gerado"""
+        default_path = "smarttour_angola_report.html"
+        if os.path.exists(default_path):
+            webbrowser.open(f"file://{os.path.abspath(default_path)}")
+            self.add_log(f"Relatório aberto: {default_path}")
+        else:
+            filename = filedialog.askopenfilename(title="Abrir relatório", filetypes=[("HTML", "*.html")])
+            if filename:
+                webbrowser.open(f"file://{os.path.abspath(filename)}")
+                self.add_log(f"Relatório aberto: {filename}")
+
+    def on_closing(self):
+        """Confirma fechamento da aplicação"""
+        if messagebox.askokcancel("Sair", "Deseja sair?"):
+            self.add_log("Encerrando aplicação...")
+            self.root.destroy()
+
+    def run(self):
+        """Executa a interface desktop"""
+        self.root.mainloop()
     
     def update_kpis(self):
         """Atualiza KPIs de forma simples"""
@@ -397,31 +398,17 @@ class SmartTourDesktopSafe:
         except Exception as e:
             print(f"❌ Erro durante execução: {e}")
 
+
+# Função principal: executa a interface desktop minimalista
 def main():
-    """Função principal com tratamento de erro"""
     try:
-        # Verificar se há display disponível
-        try:
-            import tkinter
-            root_test = tkinter.Tk()
-            root_test.destroy()
-        except Exception as e:
-            print("❌ Erro: Interface gráfica não disponível")
-            print(f"Detalhes: {e}")
-            print("\n💡 Alternativas:")
-            print("1. Use a interface web: python3 smarttour_web.py")
-            print("2. Use o modo terminal: python3 smarttour_integrated.py")
-            return
-        
-        print("🖥️ Iniciando SmartTour Angola Desktop (Safe Mode)")
-        app = SmartTourDesktopSafe()
+        app = SmartTourDesktopMinimal()
         app.run()
-        
     except Exception as e:
-        print(f"❌ Erro fatal: {e}")
-        print("\n💡 Alternativas:")
-        print("1. Use a interface web: python3 smarttour_web.py")
-        print("2. Use o modo terminal: python3 smarttour_integrated.py")
+        print(f"Erro fatal: {e}")
+        print("Alternativas:")
+        print("1. python3 smarttour_web.py (interface web)")
+        print("2. python3 smarttour_integrated.py (terminal)")
 
 if __name__ == "__main__":
     main()

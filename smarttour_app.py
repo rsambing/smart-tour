@@ -15,9 +15,9 @@ smarttour_dir = current_dir / "smarttour"
 sys.path.insert(0, str(smarttour_dir))
 
 # Imports do SmartTour
-from models.tourism_model import TouristData, EcoSiteData, RouteOptimizer
-from utils.data_processor import DataProcessor, DataValidator
-from visualization.charts import TourismVisualizer
+from smarttour.models.tourism_model import TouristData, EcoSiteData, RouteOptimizer
+from smarttour.utils.data_processor import DataProcessor, DataValidator
+from smarttour.visualization.charts import TourismVisualizer
 
 class SmartTourApp:
     """Classe principal da aplicação SmartTour"""
@@ -59,14 +59,14 @@ class SmartTourApp:
     def load_sample_data(self):
         """Carrega dados de exemplo do hackathon"""
         try:
-            # Caminhos dos arquivos de exemplo
-            base_path = Path(__file__).parent / "Material_hackathon" / "Data_set_examplos"
-            
+            # Caminhos dos arquivos de exemplo (corrigido para 'uploads')
+            base_path = Path(__file__).parent / "uploads"
+
             visitors_file = base_path / "Visitors_by_Province__preview_.csv"
             eco_sites_file = base_path / "Eco_Sites__preview_.csv"
-            
+
             self.logger.info("Carregando dados de exemplo...")
-            
+
             # Carrega dados de visitantes
             if visitors_file.exists():
                 visitor_df = self.data_processor.load_csv_data(str(visitors_file), 'visitors')
@@ -78,7 +78,7 @@ class SmartTourApp:
                     self.logger.info(f"Dados de visitantes carregados: {len(visitor_df)} registros")
                 else:
                     self.logger.warning("Arquivo de visitantes vazio ou com erro")
-            
+
             # Carrega dados de sítios ecológicos
             if eco_sites_file.exists():
                 eco_df = self.data_processor.load_csv_data(str(eco_sites_file), 'eco_sites')
@@ -89,7 +89,7 @@ class SmartTourApp:
                     self.logger.info(f"Dados de sítios ecológicos carregados: {len(eco_df)} registros")
                 else:
                     self.logger.warning("Arquivo de sítios ecológicos vazio ou com erro")
-            
+
             # Inicializa otimizador de rotas
             if self.tourist_data and self.eco_sites_data:
                 self.route_optimizer = RouteOptimizer(self.eco_sites_data, self.tourist_data)
@@ -97,7 +97,7 @@ class SmartTourApp:
                 self.logger.info("SmartTour: Todos os dados carregados com sucesso!")
             else:
                 self.logger.error("Falha ao carregar todos os dados necessários")
-                
+
         except Exception as e:
             self.logger.error(f"Erro ao carregar dados: {e}")
             self.data_loaded = False

@@ -44,6 +44,5 @@ python3 smarttour_desktop_safe.py
 | Web App | ✅ 100% | 🌟 Excelente | 🌟 Completa | 🥇 **PRINCIPAL** |
 | Terminal | ✅ 100% | ⭐ Básico | 🌟 Completa | 🥈 **BACKUP** |
 | Desktop Safe | ⚠️ 70% | ⭐ Simples | ⭐ Básica | 🥉 **EXPERIMENTAL** |
-| Desktop Original | ❌ Segfault | 🌟 Moderno | ❌ Falha | ❌ **NÃO USAR** |
 
 Execute: `python3 smarttour_web.py` e acesse `http://localhost:5000`
