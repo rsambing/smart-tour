@@ -1,16 +1,38 @@
+# ==========================================================
 # SmartTour Angola - Dependências Essenciais
+# ==========================================================
+# Este arquivo lista as bibliotecas necessárias para rodar
+# o projeto SmartTour. Cada pacote possui uma função clara
+# no fluxo: processamento -> análise -> visualização -> UI.
+# ==========================================================
 
+# ------------------------------
 # Data Processing and Analysis
-pandas>=1.3.0
-numpy>=1.21.0
+# ------------------------------
+pandas>=1.3.0       # Manipulação e limpeza de dados tabulares (CSV de visitantes, ecossítios, etc.)
+numpy>=1.21.0       # Operações matemáticas e estatísticas de base usadas em cálculos de índices
 
+# ------------------------------
 # Visualization Libraries
-matplotlib>=3.5.0
-seaborn>=0.11.0
-plotly>=5.0.0
+# ------------------------------
+matplotlib>=3.5.0   # Gráficos básicos (linhas, barras, dispersão) para análise de fluxo turístico
+seaborn>=0.11.0     # Visualização estatística mais estilizada (heatmaps de fluxo, correlações)
+plotly>=5.0.0       # Gráficos interativos e dashboards (exploração dinâmica de padrões turísticos)
 
-# Core Python Libraries (já incluídas no Python padrão)
-# pathlib
-# logging
-# typing
-# datetime
+# ------------------------------
+# Geospatial Analysis and Mapping
+# ------------------------------
+folium>=0.12.1      # Criação de mapas interativos (rotas de ecoturismo, pontos turísticos)
+geopandas>=0.10.0   # Manipulação de dados geoespaciais (shapefiles das províncias de Angola)
+
+# ------------------------------
+# User Interface (Desktop & Web)
+# ------------------------------
+PyQt5>=5.15.0       # Interface gráfica desktop (SmartTour App com tema PyDracula)
+Flask>=2.0.0        # Interface web simples para visualização dos resultados e relatórios
+
+# ------------------------------
+# Utilities and Helpers
+# ------------------------------
+requests>=2.26.0    # Requisições HTTP (caso seja necessário puxar dados externos de APIs)
+openpyxl>=3.0.0     # Suporte para leitura/escrita de arquivos Excel (.xlsx)
