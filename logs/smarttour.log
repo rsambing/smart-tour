@@ -62,3 +62,15 @@
 2025-09-03 11:11:19,919 - INFO - Iniciando análise...
 2025-09-03 11:11:20,021 - INFO - Análise completa!
 2025-09-03 11:11:20,306 - INFO - Relatório exportado: smarttour_angola_report.html
+2025-09-03 18:49:50,271 - INFO - SmartTour Angola inicializado
+2025-09-03 18:49:50,299 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.30.58.36:5000
+2025-09-03 18:49:50,303 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-03 18:49:50,304 - INFO -  * Restarting with stat
+2025-09-03 18:49:51,311 - INFO - SmartTour Angola inicializado
+2025-09-03 18:49:51,323 - WARNING -  * Debugger is active!
+2025-09-03 18:49:51,350 - INFO -  * Debugger PIN: 633-699-203
+2025-09-03 18:49:58,079 - INFO - 127.0.0.1 - - [03/Sep/2025 18:49:58] "GET / HTTP/1.1" 200 -
+2025-09-03 18:49:58,400 - INFO - 127.0.0.1 - - [03/Sep/2025 18:49:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
