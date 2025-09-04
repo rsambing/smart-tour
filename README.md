@@ -51,7 +51,7 @@ pip install -r requirements.txt
 ### 1. Clone o Repositório
 ```bash
 git clone [url-do-repositorio]
-cd hackathon-1
+cd smart-tour
 ```
 
 ### 2. Instale Dependências
