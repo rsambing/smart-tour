@@ -27,7 +27,7 @@ python3 launcher_smart.py
 
 ### 4. 🖥️ **Desktop App Segura (EXPERIMENTAL)**
 ```bash
-python3 smarttour_desktop_safe.py
+python3 smarttour_desktop_clean.py
 ```
 - **Status**: ⚠️ Experimental (pode ter problemas de compatibilidade)
 - **Uso**: Apenas se outras opções falharem

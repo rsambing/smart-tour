@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-SmartTour Angola - Launcher
-Escolha entre interface desktop (tkinter) ou web (Flask)
+SmartTour Angola - Launcher Simplificado
+Escolha entre as 3 interfaces: Terminal, Web e Desktop
 """
 
 import sys
@@ -10,91 +10,38 @@ import subprocess
 from pathlib import Path
 
 def clear_screen():
-    """Limpa a tela do terminal"""
+    """Limpa tela do terminal"""
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def print_banner():
-    """Imprime banner do SmartTour Angola"""
-    print("🇦🇴" + "="*60 + "🇦🇴")
-    print("   SMARTTOUR ANGOLA - LAUNCHER")
-    print("   Sistema de Análise de Turismo Sustentável")
-    print("   Descentralização e Ecoturismo | FTL Bootcamp")
-    print("🇦🇴" + "="*60 + "🇦🇴")
+    """Banner principal"""
+    print("🇦🇴" + "="*50 + "🇦🇴")
+    print("      SMARTTOUR ANGOLA - LAUNCHER")
+    print("   Sistema de Turismo Sustentável")
+    print("🇦🇴" + "="*50 + "🇦🇴")
     print()
 
 def print_menu():
-    """Imprime menu de opções"""
-    print("📱 ESCOLHA A INTERFACE:")
+    """Menu de opções"""
+    print("📱 ESCOLHA SUA INTERFACE:")
     print()
-    print("1. 🖥️  Interface Desktop (tkinter)")
-    print("   • Aplicação nativa com tema escuro")
-    print("   • KPIs em tempo real")
-    print("   • Design moderno ecológico")
+    print("1. 🖥️  Terminal (Rápido)")
+    print("   • Execução automática")
+    print("   • Gera relatório HTML")
+    print("   • Ideal para análise rápida")
     print()
-    print("2. 🌐 Interface Web (Flask)")
-    print("   • Acesso via navegador")
-    print("   • Responsiva e moderna")
+    print("2. 🌐 Web (Recomendado)")
+    print("   • Interface moderna no navegador")
     print("   • Upload de arquivos")
+    print("   • Visualizações interativas")
     print()
-    print("3. 🚀 Análise Rápida (Terminal)")
-    print("   • Execução direta no terminal")
-    print("   • Dados padrão")
-    print("   • Geração automática de relatório")
+    print("3. 🖱️  Desktop (GUI)")
+    print("   • Interface gráfica nativa")
+    print("   • Simples e funcional")
+    print("   • Requer tkinter instalado")
     print()
     print("4. ❌ Sair")
     print()
-
-def run_desktop():
-    """Executa interface desktop"""
-    print("🖥️ Iniciando interface desktop...")
-    print("📋 Verificando dependências...")
-    
-    try:
-        import tkinter
-        print("✅ tkinter disponível")
-        
-        # Testar se interface gráfica funciona
-        try:
-            test_root = tkinter.Tk()
-            test_root.destroy()
-            print("✅ Interface gráfica OK")
-        except Exception as e:
-            print(f"❌ Problema com interface gráfica: {e}")
-            print("� Tentando versão segura...")
-        
-        print("�🚀 Executando SmartTour Desktop...")
-        
-        # Tentar versão segura primeiro
-        if os.path.exists("smarttour_desktop_safe.py"):
-            subprocess.run([sys.executable, "smarttour_desktop_safe.py"])
-        else:
-            subprocess.run([sys.executable, "smarttour_desktop.py"])
-        
-    except ImportError:
-        print("❌ tkinter não está disponível")
-        print("💡 Para instalar: sudo apt install python3-tk")
-        input("\nPressione Enter para continuar...")
-
-def run_web():
-    """Executa interface web"""
-    print("🌐 Iniciando interface web...")
-    print("📋 Verificando dependências...")
-    
-    try:
-        import flask
-        print("✅ Flask disponível")
-        
-        print("🚀 Executando SmartTour Web...")
-        print("📱 Acesse: http://localhost:5000")
-        print("🛑 Pressione Ctrl+C para parar o servidor")
-        print()
-        
-        subprocess.run([sys.executable, "smarttour_web.py"])
-        
-    except ImportError:
-        print("❌ Flask não está disponível")
-        print("💡 Para instalar: pip install flask")
-        input("\nPressione Enter para continuar...")
 
 def run_terminal():
     """Executa análise no terminal"""
@@ -124,9 +71,41 @@ def run_terminal():
     
     input("\nPressione Enter para continuar...")
 
+def run_web():
+    """Executa versão web"""
+    print("🌐 Iniciando SmartTour Web...")
+    print("📱 Acesse: http://localhost:5000")
+    print("🛑 Pressione Ctrl+C para parar")
+    print()
+    try:
+        subprocess.run([sys.executable, "smarttour_web.py"])
+    except FileNotFoundError:
+        print("❌ Arquivo smarttour_web.py não encontrado")
+    except Exception as e:
+        print(f"❌ Erro: {e}")
+
+def run_desktop():
+    """Executa versão desktop"""
+    print("🖥️ Iniciando SmartTour Desktop...")
+    
+    # Verifica se tkinter está disponível
+    try:
+        import tkinter
+        print("✅ tkinter disponível")
+    except ImportError:
+        print("❌ tkinter não instalado")
+        print("💡 Instale: sudo apt install python3-tk")
+        return
+    
+    try:
+        subprocess.run([sys.executable, "smarttour_desktop_clean.py"])
+    except FileNotFoundError:
+        print("❌ Arquivo smarttour_desktop_clean.py não encontrado")
+    except Exception as e:
+        print(f"❌ Erro: {e}")
+
 def main():
     """Função principal"""
-    
     while True:
         clear_screen()
         print_banner()
@@ -138,17 +117,20 @@ def main():
             if choice == '1':
                 clear_screen()
                 print_banner()
-                run_desktop()
+                run_terminal()
+                input("\nPressione Enter para continuar...")
             
             elif choice == '2':
                 clear_screen()
                 print_banner()
                 run_web()
+                input("\nPressione Enter para continuar...")
             
             elif choice == '3':
                 clear_screen()
                 print_banner()
-                run_terminal()
+                run_desktop()
+                input("\nPressione Enter para continuar...")
             
             elif choice == '4':
                 clear_screen()
@@ -157,13 +139,12 @@ def main():
                 break
             
             else:
-                print("❌ Opção inválida! Escolha entre 1-4.")
+                print("❌ Opção inválida! Use 1, 2, 3 ou 4.")
                 input("Pressione Enter para continuar...")
         
         except KeyboardInterrupt:
             clear_screen()
-            print("\n👋 Saindo do SmartTour Angola...")
-            print("🇦🇴 Até logo!")
+            print("\n👋 Saindo...")
             break
         except Exception as e:
             print(f"❌ Erro: {e}")

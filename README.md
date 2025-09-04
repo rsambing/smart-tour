@@ -73,42 +73,28 @@ python main.py
 
 ```
 smart-tour/
-├── docs/                     # Documentação do projeto
-│   ├── requirements.txt       # Dependências principais
-│   └── SOLUCOES.md            # Soluções propostas / guia interno
+├── docs/                           # Documentação do projeto
+│   ├── requirements.txt            # Dependências principais
+│   └── solucoes.md                 # Soluções propostas / guia interno
 │
-├── logs/                     # Logs do sistema
+├── logs/                           # Logs do sistema
 │   └── smarttour.log
 │
-├── modules/                  # Funções auxiliares genéricas
-│   ├── app_functions.py       # Funções de suporte para app principal
-│   └── __init__.py
+├── templates/                      # Templates HTML (modo web)
+│   ├── index.html                  # Página inicial (upload/inputs)
+│   └── results.html                # Página de resultados/relatórios
 │
-├── smarttour/                # Core da aplicação
-│   ├── config.py              # Configurações globais (paths, constantes, etc.)
-│   ├── models/                # Modelos de dados
-│   │   └── tourism_model.py   # Modelo de análise turística/sustentabilidade
-│   ├── utils/                 # Utilitários
-│   │   └── data_processor.py  # Limpeza e processamento dos datasets (CSV)
-│   └── visualization/         # Camada de visualização
-│       └── charts.py          # Criação de gráficos (matplotlib/plotly)
-│
-├── templates/                # Templates HTML (modo web)
-│   ├── index.html             # Página inicial (upload/inputs)
-│   └── results.html           # Página de resultados/relatórios
-│
-├── uploads/                  # Arquivos de entrada (datasets)
+├── uploads/                        # Arquivos de entrada (datasets)
 │   ├── Eco_Sites__preview_.csv
 │   └── Visitors_by_Province__preview_.csv
 │
-├── launcher.py               # Script de inicialização principal
-├── smarttour_app.py          # Interface desktop (PySide6/Qt)
-├── smarttour_web.py          # Interface web (Flask/FastAPI)
-├── smarttour_integrated.py   # Versão integrada (provavelmente web + desktop)
-├── smarttour_desktop_safe.py # Variante desktop estável/testada
-├── smarttour_angola_report.html # Relatório gerado
-├── test_smarttour.py         # Testes automatizados
-├── README.md                 # Descrição do projeto
+├── launcher.py                     # Script de inicialização principal
+├── smarttour_core.py               # (Nucleo do funcionamento do desktop)
+├── smarttour_web.py                # Interface web (Flask)
+├── smarttour_integrated.py         # Versão integrada (no terminal)
+├── smarttour_desktop_clean.py      # Variante desktop estável/testada
+├── smarttour_angola_report.html    # Relatório gerado
+├── README.md                       # Descrição do projeto
 ```
 
 ## 🎯 Funcionalidades Principais
