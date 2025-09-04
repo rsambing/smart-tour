@@ -75,6 +75,7 @@ python main.py
 smart-tour/
 ├── docs/                           # Documentação do projeto
 │   ├── requirements.txt            # Dependências principais
+│   ├── mapa.md                     # Mapa e estrutura do projecto
 │   └── solucoes.md                 # Soluções propostas / guia interno
 │
 ├── logs/                           # Logs do sistema
@@ -94,6 +95,7 @@ smart-tour/
 ├── smarttour_integrated.py         # Versão integrada (no terminal)
 ├── smarttour_desktop_clean.py      # Variante desktop estável/testada
 ├── smarttour_angola_report.html    # Relatório gerado
+├── test_smarttour.py               # Teste de dependencias para o projecto
 ├── README.md                       # Descrição do projeto
 ```
 
