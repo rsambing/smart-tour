@@ -189,40 +189,6 @@ python test_smarttour.py
 - **Dashboard KPIs**: Métricas principais
 - **Visualizações**: Gráficos exportáveis
 
-### Como Exportar
-```python
-from smarttour_app import smarttour_app
-
-# Carrega dados e executa análise
-smarttour_app.load_sample_data()
-smarttour_app.perform_analysis()
-
-# Exporta relatório
-smarttour_app.export_analysis_report("relatorio_angola.html")
-```
-
-## 🚀 Uso Avançado
-
-### API Programática
-```python
-from smarttour_app import smarttour_app
-
-# Análise específica de província
-analysis = smarttour_app.get_province_analysis("Luanda")
-
-# Geração de visualizações
-visualizations = smarttour_app.generate_visualizations()
-
-# Status da aplicação
-status = smarttour_app.get_status()
-```
-
-### Personalização
-- **Novos Datasets**: Adicione arquivos CSV à pasta de dados
-- **KPIs Customizados**: Modifique `data_processor.py`
-- **Visualizações**: Estenda `charts.py`
-- **Temas**: Personalize cores em `config.py`
-
 ## 👥 Equipa de Desenvolvimento
 
 **Grupo 2 - FTL Bootcamp**
