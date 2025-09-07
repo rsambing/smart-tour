@@ -16,6 +16,7 @@ from pathlib import Path
 import logging
 import base64
 from io import BytesIO
+import os
 
 class SmartTourAngola:
     """Sistema completo de análise de turismo sustentável para Angola"""
@@ -50,6 +51,7 @@ class SmartTourAngola:
     
     def setup_logging(self):
         """Configura logging"""
+        os.makedirs('logs', exist_ok=True) #Criar diretório de logs se não existir
         logging.basicConfig(
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s',
